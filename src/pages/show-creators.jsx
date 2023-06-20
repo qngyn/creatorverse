@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../client";
 import CreatorCard from "../components/creator-card";
+import { Link } from 'react-router-dom'
+import './show-creators.css';
 
 const ShowCreators = () => {
     const [creators, setCreators] = useState();
@@ -28,7 +30,15 @@ const ShowCreators = () => {
         return (<h3> No creators to show </h3>)
     }
     return <>
-        {creators.map((creator) => <CreatorCard key={creator.id} creator={creator} />)}
+        <div className="row">
+            {creators.map((creator) =>
+                <div key={creator.id} className="col">
+                        <CreatorCard creator={creator} />
+                </div>
+            )}
+
+
+        </div>
     </>
 }
 

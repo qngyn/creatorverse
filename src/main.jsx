@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="add" element={<AddCreator />} />
         <Route path="edit" element={<EditCreator />} />
         <Route path="show" element={<ShowCreators />} />
-        <Route path="view" element={<ViewCreator />} />
+        <Route path="view/:id" element={<ViewCreator />} />
       </Routes>
     </BrowserRouter>,
   </React.StrictMode>,
