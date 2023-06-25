@@ -32,20 +32,17 @@ const ShowCreators = () => {
     return <>
         <div className="main-panel">
             <header>
-
                 <hgroup>
                     <h1>Creatorverse</h1>
                     <h4>A person's top content creators can say a lot about them?
                     </h4>
                     <h4>Share yours</h4>
                 </hgroup>
-                {/* <p><a href="#" role="button" onclick="event.preventDefault()">Call to action</a></p> */}
                 <Link to={'/add'} role="button" style={{height: '65px'}}>
                     <h5> Add Creator
                     </h5>
                 </Link>
             </header>
-
         </div>
 
 

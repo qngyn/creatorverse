@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { faYoutube, faFontAwesome } from '@fortawesome/free-brands-svg-icons'

@@ -4,6 +4,7 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Link,
 } from "react-router-dom";
 import App from './App.jsx'
 import './index.css'
@@ -14,7 +15,17 @@ import ViewCreator from './pages/view-creator.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+
     <BrowserRouter>
+      <nav>
+        <ul style={{ marginLeft: '20px' }}>
+          <li><strong>
+            <Link to={`/`}>
+              Creatorverse
+            </Link>
+          </strong></li>
+        </ul>
+      </nav>
       <Routes>
         {/* <Route path="/" element={<App />} /> */}
         <Route path="/" element={<ShowCreators />} />
