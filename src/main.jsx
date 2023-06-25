@@ -16,10 +16,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
+        {/* <Route path="/" element={<App />} /> */}
+        <Route path="/" element={<ShowCreators />} />
         <Route path="add" element={<AddCreator />} />
         <Route path="edit" element={<EditCreator />} />
-        <Route path="show" element={<ShowCreators />} />
+        {/* <Route path="show" element={<ShowCreators />} /> */}
         <Route path="view/:id" element={<ViewCreator />} />
       </Routes>
     </BrowserRouter>

@@ -12,7 +12,7 @@ const CreatorCard = ({ creator }) => {
     const { id, name, description, url, imageURL } = creator;
 
     return (<>
-        <article style={{ width: '300px', maxHeight: '225px', backgroundImage: `url(${imageURL})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#333333', backgroundBlendMode: 'multiply' }} >
+        <article style={{ width: '300px', maxHeight: '225px', margin: 'auto', backgroundImage: `url(${imageURL})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#333333', backgroundBlendMode: 'multiply' }} >
             <div>
                 <h4 style={{ textAlign: 'left', marginBottom: '0' }}>{name}</h4>
 
