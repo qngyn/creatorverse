@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import {useParams} from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { supabase } from "../client";
 import './view-creator.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
 const ViewCreator = () => {
     const { id } = useParams()
@@ -38,13 +40,20 @@ const ViewCreator = () => {
 
     return (
         <>
-            <div className="grid-container">
-                <img src={imageURL} className='creator-image'/>
+            <div className='container'>
+                <div className="grid-container">
+                    <img src={imageURL} className='creator-image' />
 
-                <div className='text-container'>
-                    <h4>{name}</h4>
-                    <p>{description}</p>
-                    <p>{url}</p>
+                    <div className='text-container'>
+                        <h4>{name}</h4>
+                        <p>{description}</p>
+                        <p>{url}</p>
+
+                        <Link to={`/edit/${id}`} role="button" style={{ height: '20px', display: 'flex', width: 'fit-content', alignItems: 'center' }}>
+                            <p style={{ margin: 0 }}> Edit <span style={{ marginLeft: '5px' }}><FontAwesomeIcon icon={faPenToSquare} /></span>
+                            </p>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>
