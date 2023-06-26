@@ -30,7 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         {/* <Route path="/" element={<App />} /> */}
         <Route path="/" element={<ShowCreators />} />
         <Route path="add" element={<AddCreator />} />
-        <Route path="edit" element={<EditCreator />} />
+        <Route path="edit/:id" element={<EditCreator />} />
         {/* <Route path="show" element={<ShowCreators />} /> */}
         <Route path="view/:id" element={<ViewCreator />} />
       </Routes>

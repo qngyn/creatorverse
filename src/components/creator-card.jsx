@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas, faArrowRight } from '@fortawesome/free-solid-svg-icons'
+import { fas, faArrowRight, faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faYoutube, faFontAwesome } from '@fortawesome/free-brands-svg-icons'
 import { Link } from "react-router-dom";
 import '../App.css';
@@ -21,13 +21,20 @@ const CreatorCard = ({ creator }) => {
 
                 <hr />
                 <p className='ellipsis-two-lines' style={{ textAlign: 'left' }}>{description}</p>
-                <Link to={`/view/${id}`}>
-                    <p> View more
-                        <span style={{ marginLeft: '5px' }}><FontAwesomeIcon icon={faArrowRight} /></span>
-                    </p>
-                </Link>
-            </div>
+                <div style={{ display: 'flex', justifyContent: 'space-evenly', height: '20px' }}>
+                    <Link to={`/edit/${id}`}>
+                        <p> Edit
+                            <span style={{ marginLeft: '5px' }}><FontAwesomeIcon icon={faPenToSquare} /></span>
+                        </p>
+                    </Link>
 
+                    <Link to={`/view/${id}`}>
+                        <p> View more
+                            <span style={{ marginLeft: '5px' }}><FontAwesomeIcon icon={faArrowRight} /></span>
+                        </p>
+                    </Link>
+                </div>
+            </div>
 
         </article >
 

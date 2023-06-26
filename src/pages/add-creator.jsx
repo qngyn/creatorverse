@@ -67,7 +67,6 @@ const AddCreator = () => {
                 </button>
             </form>
         </div>
-
     </>
 }
 
