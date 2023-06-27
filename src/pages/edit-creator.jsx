@@ -3,6 +3,7 @@ import { supabase } from "../client";
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
 const EditCreator = () => {
@@ -11,6 +12,8 @@ const EditCreator = () => {
     const [imageUrl, setImageUrl] = useState('');
     const [description, setDescription] = useState('');
     const [youtubeLink, setYoutubeLink] = useState('');
+
+    const [deleted, setDeleted] = useState(false);
 
     useEffect(() => {
         const getCurrentCreator = async (id) => {
@@ -51,6 +54,30 @@ const EditCreator = () => {
             console.error('Failed to update creator\'s information: ', error);
         }
     }
+
+    const onDelete = async () => {
+
+        const { error } = await supabase
+            .from('creators')
+            .delete()
+            .eq('id', id);
+
+        if (error) {
+            console.error("Failed to delete user: ", error);
+        } else {
+            setDeleted(true);
+        }
+
+    }
+
+    if (deleted) {
+        return (
+            <article>
+                Creator {name} deleted!
+            </article>
+        )
+    }
+
     return <>
         <div className='container'>
             <header>
@@ -85,6 +112,9 @@ const EditCreator = () => {
 
                 <button type="submit" value="Submit" onClick={onSubmit}>
                     Submit
+                </button>
+                <button className='secondary' onClick={onDelete}>
+                    Remove <span style={{ marginLeft: '5px' }}><FontAwesomeIcon icon={faTrash} /></span>
                 </button>
             </form>
         </div>
