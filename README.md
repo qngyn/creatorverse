@@ -2,9 +2,9 @@
 
 Submitted by: Quynh Nguyen
 
-About this web app: **👉🏿 app description here**
+About this web app: prework for Web 103 course
 
-Time spent: **👉🏿 X** hours
+Time spent: ~ 2 weeks 
 
 ## Required Features
 
