@@ -6,7 +6,8 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import App from './App.jsx'
+import './App.css'
+import '@picocss/pico'
 import './index.css'
 import AddCreator from './pages/add-creator.jsx';
 import EditCreator from './pages/edit-creator.jsx';
